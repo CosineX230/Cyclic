@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collatz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="title"></div>
-    <div class="rules">
-        <div class="rule_number"></div>
-        <div class="rule"></div>
-        <div class="rule"></div>
+    <div class="title">Collatz Pattern Generator</div>
+    <div class="rule_section">
+        <div class="rule_number">
+            <label for="customNumber">Enter a number:</label>
+            <input type="number" id="quantity" name="quantity"
+                min="2" max="3" step="1" value="2">
+            </div>
+        <div class="rules">
+            <div>
+                <label for="relation">Case x % 2 = 0:</label>
+                <input type="text" id="relation" name="relation" placeholder="x / 2" required>
+            </div>
+            <div>
+                <label for="relation">Case x % 2 = 1:</label>
+                <input type="text" id="relation" name="relation" placeholder="3x + 1" required>
+            </div>
+        </div>
     </div>
     <div class="sequence">
-        <div class="input"></div>
-        <div class="output"></div>
+        <div class="input">
+            <label for="input">Enter starting seed here:</label>
+            <input type="number" id="input" name="input"
+                min="1" max="1000" step="1" value="1">
+            <input type="submit" value="Generate Terms">
+            <script src="script.js"></script>
+        </div>
+        <div class="output">
+            <input id="output" type="text" readonly>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,112 @@
+body {
+    background-color: #355C7D;
+}
+
+body div {
+    width: 50%;
+    margin: 20px;
+    justify-self: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #6C5B7B;
+    border: 4px solid Black;
+    border-radius: 20px;
+}
+
+body div div {
+    background-color: #C06C84;
+}
+
+body div div div {
+    background-color: #F67280;
+}
+
+.title {
+    height: 75px;
+    font-size: 40pt;
+    align-content: center;
+    text-align: center;
+}
+
+.rule_section {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rule_section div {
+    margin: 15px;
+    
+}
+
+.rule_number {
+    width: 80%;
+    flex: 1;
+    text-align: center;
+    align-content: center;
+}
+
+.rules {
+    flex: 5;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rules div {
+    flex: 1;
+    height: 70%;
+    margin: 7px;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+#relation {
+    font-size: 30px;
+    width: 200px;
+}
+
+.sequence {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sequence div {
+    margin: 10px;
+    width: 80%;
+}
+
+.input {
+    flex: 1;
+    align-content: center;
+    text-align: center;
+}
+
+#input {
+    width: 50px;
+}
+
+.output {
+    flex: 5;
+    align-content: center;
+    text-align: center;
+}
+
+#output {
+    width: 80%;
+    height: 80%;
+}
+
+input {
+    border: 2px solid Black;
+    background-color: #F8B195;
+    color: Black;
+
+}
