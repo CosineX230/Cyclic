@@ -17,11 +17,11 @@
         <div class="rules">
             <div>
                 <label for="relation">Case x % 2 = 0:</label>
-                <input type="text" id="relation" name="relation" placeholder="x / 2" required>
+                <input type="text" id="relation1" name="relation" placeholder="x / 2" required>
             </div>
             <div>
                 <label for="relation">Case x % 2 = 1:</label>
-                <input type="text" id="relation" name="relation" placeholder="3x + 1" required>
+                <input type="text" id="relation2" name="relation" placeholder="3x + 1" required>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
             <label for="input">Enter starting seed here:</label>
             <input type="number" id="input" name="input"
                 min="1" max="1000" step="1" value="1">
-            <input type="submit" value="Generate Terms">
+            <input type="submit" onsubmit="handleSubmit()" value="Generate Terms">
             <script src="script.js"></script>
         </div>
         <div class="output">
