@@ -15,13 +15,14 @@ function generateBoxes(){
         const wrapper2 = document.createElement("span");
 
         const label = document.createElement("label");
-        label.setAttribute("for", "relation");
+        label.setAttribute("for", "relation" + i);
         label.textContent = "Case x % " + count + " = " + i;
         
         const field = document.createElement("input");
         field.type = "text";
-        field.id = "relation";
+        field.id = "relation" + i;
         field.name = "relation";
+        field.className = "relation";
         if(i === 1){
             field.placeholder = "x / " + count;
         }

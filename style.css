@@ -62,7 +62,7 @@ body div div div {
     align-content: center;
 }
 
-#relation {
+#relation1, #relation2, #relation3, #relation4, #relation5 {
     font-size: 30px;
     width: 200px;
     flex: 1 1 auto;
@@ -106,4 +106,12 @@ input {
     background-color: #F8B195;
     color: Black;
 
+}
+
+#button:hover {
+    background-color: blue;
+}
+
+#button:active {
+    background-color: black;
 }

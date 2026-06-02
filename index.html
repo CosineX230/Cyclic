@@ -14,9 +14,8 @@
             <label for="customNumber">Enter a number:</label>
             <input type="number" id="quantity" name="quantity"
                 min="2" max="3" step="1" value="2">
-            </div>
-        <div class="rules" id="rules"></div>
         </div>
+        <div class="rules" id="rules"></div>
         <script src="ruleset.js"></script>
     </div>
     
@@ -25,7 +24,7 @@
             <label for="input">Enter starting seed here:</label>
             <input type="number" id="input" name="input"
                 min="1" max="1000" step="1" value="1">
-            <input type="submit" onsubmit="handleSubmit()" value="Generate Terms">
+            <input type="button" id="button" onclick="handleSubmit()" value="Generate Terms">
             <script src="script.js"></script>
         </div>
         <div class="output">
