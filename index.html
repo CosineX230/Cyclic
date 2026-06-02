@@ -8,23 +8,18 @@
 </head>
 <body>
     <div class="title">Collatz Pattern Generator</div>
+
     <div class="rule_section">
         <div class="rule_number">
             <label for="customNumber">Enter a number:</label>
             <input type="number" id="quantity" name="quantity"
                 min="2" max="3" step="1" value="2">
             </div>
-        <div class="rules">
-            <div>
-                <label for="relation">Case x % 2 = 0:</label>
-                <input type="text" id="relation1" name="relation" placeholder="x / 2" required>
-            </div>
-            <div>
-                <label for="relation">Case x % 2 = 1:</label>
-                <input type="text" id="relation2" name="relation" placeholder="3x + 1" required>
-            </div>
+        <div class="rules" id="rules"></div>
         </div>
+        <script src="ruleset.js"></script>
     </div>
+    
     <div class="sequence">
         <div class="input">
             <label for="input">Enter starting seed here:</label>

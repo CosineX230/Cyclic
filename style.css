@@ -28,16 +28,13 @@ body div div div {
 }
 
 .rule_section {
-    height: 250px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.rule_section div {
-    margin: 15px;
-    
+    padding: 10px;    
+    box-sizing: border-box;
 }
 
 .rule_number {
@@ -58,7 +55,6 @@ body div div div {
 
 .rules div {
     flex: 1;
-    height: 70%;
     margin: 7px;
     width: 90%;
     font-size: 30px;
@@ -66,9 +62,10 @@ body div div div {
     align-content: center;
 }
 
-#relation1, #relation2 {
+#relation {
     font-size: 30px;
     width: 200px;
+    flex: 1 1 auto;
 }
 
 .sequence {
