@@ -13,7 +13,7 @@ async function handleSubmit() {
     }
 
     const seed = document.getElementById("input");
-    const BACKEND_URL = "http://127.0.0.1:5000"; // replace with deployed backend URL in production
+    const BACKEND_URL = "https://cyclic-2-mww8.onrender.com"; // replace with deployed backend URL in production
     const url = `${BACKEND_URL}/process`;
     const payload = { seed: seed.value, relations: relationList };
     console.log("Submitting to Flask:", url, payload);
