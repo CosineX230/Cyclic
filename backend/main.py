@@ -1,6 +1,6 @@
 import os
-from eval import build_expression
-from eval import generate_sequence
+from backend.eval import build_expression
+from backend.eval import generate_sequence
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
