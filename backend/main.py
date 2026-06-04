@@ -1,23 +1,16 @@
-import os
-from backend.eval import build_expression
-from backend.eval import generate_sequence
-from flask import Flask, request, jsonify, send_from_directory
+from backend.eval import build_expression, generate_sequence
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-app = Flask(__name__, static_folder=BASE_DIR, static_url_path="/static")
-CORS(app, resources={r"/process": {"origins": "*"}})
-
-@app.route("/", methods=["GET"])
-def index():
-    return send_from_directory(BASE_DIR, "index.html")
+app = Flask(__name__)
+CORS(app)
 
 @app.route("/process", methods=["POST"])
 def process():
-    incoming = request.get_json()
+    data = request.get_json() or {}
 
-    seed = incoming.get("seed")
-    relations = incoming.get("relations", [])
+    seed = data.get("seed")
+    relations = data.get("relations", [])
 
     if not relations:
         return jsonify({"error": "No relations provided"}), 400
@@ -29,9 +22,4 @@ def process():
     
     rule_list = build_expression(relations)
     sequence = generate_sequence(rule_list, seed_value, limit=50)
-    reply = {"sequence": sequence}
-    return jsonify(reply)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return jsonify({"sequence": sequence})
