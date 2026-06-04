@@ -62,7 +62,7 @@ body div div div {
     align-content: center;
 }
 
-#relation1, #relation2, #relation3, #relation4, #relation5 {
+#relation1, #relation2, #relation3, #relation4, #relation0 {
     font-size: 30px;
     width: 200px;
     flex: 1 1 auto;

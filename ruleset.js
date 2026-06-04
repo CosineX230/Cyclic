@@ -10,7 +10,7 @@ function generateBoxes(){
     }
     container.innerHTML = "";
 
-    for(let i = 1; i <= count; i++){
+    for(let i = 0; i < count; i++){
         const wrapper = document.createElement("div");
         const wrapper2 = document.createElement("span");
 
@@ -23,7 +23,7 @@ function generateBoxes(){
         field.id = "relation" + i;
         field.name = "relation";
         field.className = "relation";
-        if(i === 1){
+        if(i === 0){
             field.placeholder = "x / " + count;
         }
         else{
