@@ -6,7 +6,7 @@ import re
 
 def replace_coefficients(relation):
     relation = relation.replace('^', '**')
-    relation = re.sub(r'(\d+)(?=[A-Za-z(])', r'\1*\2', relation)
+    relation = re.sub(r'(\d+)(?=[A-Za-z(])', r'\1*', relation)
     return relation.strip()
 
 def build_expression(relations):
