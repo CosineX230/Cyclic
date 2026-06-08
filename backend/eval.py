@@ -31,17 +31,30 @@ def get_function(rules):
         raise ValueError("No rule matched for x = {}".format(x))
     return f
 
-def generate_sequence(expr, start, limit=500):
+def generate_sequence(expr, start, max_terms=1000, max_value=10**12):
     function = get_function(expr)
     sequence = [start]
+    seen = {start}
     x = start
 
-    for _ in range(limit):
+    while len(sequence) < max_terms:
         x = function(x)
-        if x in sequence:
-            sequence.append(x)
-            break
-        sequence.append(x)
         if x is None:
             break
-    return sequence;
+
+        if abs(x) > max_value:
+            raise ValueError(
+                f"Divergence detected: value exceeded max_value={max_value} ({x})"
+            )
+
+        sequence.append(x)
+        if x in seen:
+            break
+        seen.add(x)
+
+    if len(sequence) >= max_terms:
+        raise ValueError(
+            f"Sequence exceeded max_terms={max_terms} without repeating, possible divergence"
+        )
+
+    return sequence

@@ -50,7 +50,7 @@ body div div div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .rules div {
@@ -69,7 +69,7 @@ body div div div {
 }
 
 .sequence {
-    height: 250px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,8 +97,14 @@ body div div div {
 }
 
 #output {
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: hidden;
+    cursor: default;
     width: 80%;
-    height: 80%;
+    min-height: 150px;
+    background-color: #F8B195;
+    border: 2px solid Black;
 }
 
 input {
@@ -109,9 +115,9 @@ input {
 }
 
 #button:hover {
-    background-color: blue;
+    background-color: #355C7D;
 }
 
 #button:active {
-    background-color: black;
+    background-color: #6C5B7B;
 }

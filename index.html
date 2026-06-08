@@ -11,7 +11,7 @@
 
     <div class="rule_section">
         <div class="rule_number">
-            <label for="customNumber">Enter a number:</label>
+            <label for="customNumber">Enter the number of relations:  </label>
             <input type="number" id="quantity" name="quantity"
                 min="2" max="3" step="1" value="2">
         </div>
@@ -21,14 +21,14 @@
     
     <div class="sequence">
         <div class="input">
-            <label for="input">Enter starting seed here:</label>
+            <label for="input">Enter starting seed:  </label>
             <input type="number" id="input" name="input"
-                min="1" max="1000" step="1" value="1">
+                step="1" value="1">
             <input type="button" id="button" onclick="handleSubmit()" value="Generate Terms">
             <script src="script.js"></script>
         </div>
         <div class="output">
-            <input id="output" type="text" readonly>
+            <textarea id="output" class="output-box" readonly></textarea>
         </div>
     </div>
 </body>
