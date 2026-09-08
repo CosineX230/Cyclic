@@ -3,12 +3,20 @@ const container = document.getElementById("rules");
 
 input.addEventListener("input", generateBoxes);
 
-function generateBoxes(){
-    const count = parseInt(input.value) || 2;
-    if(count < 2 || count > 5){
-        count = 2;
+function verifyInputValue(number){
+    const count = parseInt(number) || 2;
+    if(count < 2){
+        return 2;
     }
-    container.innerHTML = "";
+    if(count > 5){
+        return 5;
+    }
+    return count;
+}
+
+function generateBoxes(){
+    count = verifyInputValue(input.value)
+    container.textContent = "";
 
     for(let i = 0; i < count; i++){
         const wrapper = document.createElement("div");

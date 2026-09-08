@@ -43,18 +43,25 @@ def generate_sequence(expr, start, max_terms=1000, max_value=10**12):
             break
 
         if abs(x) > max_value:
-            raise ValueError(
-                f"Divergence detected: value exceeded max_value={max_value} ({x})"
-            )
+            raise ValueError(f"Divergence detected: value exceeded max_value={max_value} ({x})")
 
         sequence.append(x)
         if x in seen:
+            seen.add(x)
             break
         seen.add(x)
 
     if len(sequence) >= max_terms:
-        raise ValueError(
-            f"Sequence exceeded max_terms={max_terms} without repeating, possible divergence"
-        )
+        raise ValueError(f"Sequence exceeded max_terms={max_terms} without repeating, possible divergence")
 
-    return sequence
+    seq_length = len(sequence) - 1
+    max_term = max(sequence)
+    cycle_length = get_cycle_length(sequence)
+
+    return sequence, seq_length, max_term, cycle_length
+
+def get_cycle_length(sequence):
+    last_index = len(sequence) - 1
+    repeat_num = sequence[last_index]
+    first_index = sequence.index(repeat_num)
+    return last_index - first_index

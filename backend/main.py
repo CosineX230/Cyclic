@@ -34,10 +34,13 @@ def process():
     #evaluate the sequence
     try:
         rule_list = build_expression(relations)
-        sequence = generate_sequence(rule_list, seed_value)
+        sequence, seq_length, max_term, cycle_length = generate_sequence(rule_list, seed_value)
     except ValueError as exc:
         return jsonify({"error": "Sequence divergence or non-cycling rule detected", "detail": str(exc)}), 400
     except Exception as exc:
         return jsonify({"error": "Backend processing failed", "detail": str(exc)}), 500
 
-    return jsonify({"sequence": sequence})
+    return jsonify({"sequence": sequence, 
+                    "seq_length": seq_length, 
+                    "max_term": max_term, 
+                    "cycle_length": cycle_length})

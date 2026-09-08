@@ -68,14 +68,14 @@ body div div div {
     flex: 1 1 auto;
 }
 
-.sequence {
+.sequence_section {
     min-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sequence div {
+.sequence_section div {
     margin: 10px;
     width: 80%;
 }
@@ -94,6 +94,8 @@ body div div div {
     flex: 5;
     align-content: center;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #output {
@@ -103,15 +105,13 @@ body div div div {
     cursor: default;
     width: 80%;
     min-height: 150px;
-    background-color: #F8B195;
-    border: 2px solid Black;
+    margin-bottom: 10px;
 }
 
 input {
     border: 2px solid Black;
     background-color: #F8B195;
     color: Black;
-
 }
 
 #button:hover {
@@ -120,4 +120,16 @@ input {
 
 #button:active {
     background-color: #6C5B7B;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    background-color: #F8B195;
+    border: 2px solid Black;
+    resize: none;
 }

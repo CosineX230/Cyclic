@@ -41,6 +41,9 @@ async function handleSubmit() {
         const sequence = data.sequence || [];
         output.value = Array.isArray(sequence) ? sequence.join(", ") : String(sequence);
         resizeOutput(output);
+        const seq_length = data.seq_length;
+        const max_term = data.max_term;
+        const cycle_length = data.cycle_length;
     } 
     catch (error) {
         console.error("Fetch failed", error);
