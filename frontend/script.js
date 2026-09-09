@@ -3,6 +3,10 @@ async function handleSubmit() {
     output.value = "Submitting...";
     resizeOutput(output);
 
+    const s_length = document.getElementById("sequence_length");
+    const max = document.getElementById("max_term");
+    const c_length = document.getElementById("cycle_length")
+
     const relationEls = document.querySelectorAll('.relation');
     const relationList = Array.from(relationEls, el => el.value.trim()).filter(Boolean);
     const seed = document.getElementById("input");
@@ -41,9 +45,14 @@ async function handleSubmit() {
         const sequence = data.sequence || [];
         output.value = Array.isArray(sequence) ? sequence.join(", ") : String(sequence);
         resizeOutput(output);
+
         const seq_length = data.seq_length;
         const max_term = data.max_term;
         const cycle_length = data.cycle_length;
+
+        s_length.value = seq_length;
+        max.value = max_term;
+        c_length.value = cycle_length;
     } 
     catch (error) {
         console.error("Fetch failed", error);
