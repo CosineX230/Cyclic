@@ -1,0 +1,27 @@
+Folder PATH listing for volume Windows
+Volume serial number is 3C55-7C45
+C:.
+?   tree.txt
+?   
+?   +---workflows
+?           pages.yml
+?           
+?       settings.json
+?       
++---backend
+?   ?   eval.py
+?   ?   main.py
+?   ?   __init__.py
+?   ?   
+?   +---__pycache__
+?           eval.cpython-312.pyc
+?           expr_builder.cpython-312.pyc
+?           main.cpython-312.pyc
+?           __init__.cpython-312.pyc
+?           
++---frontend
+        index.html
+        ruleset.js
+        script.js
+        style.css
+        
