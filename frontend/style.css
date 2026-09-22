@@ -20,7 +20,7 @@ body div div div {
     background-color: #F67280;
 }
 
-.title {
+.title_section {
     height: 75px;
     font-size: 40pt;
     align-content: center;
@@ -32,9 +32,7 @@ body div div div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 10px;    
-    box-sizing: border-box;
+    align-items: center;    
 }
 
 .rule_number {
@@ -62,7 +60,7 @@ body div div div {
     align-content: center;
 }
 
-#relation1, #relation2, #relation3, #relation4, #relation0 {
+#relation1, #relation2, #relation3, #relation4, #relation5, #relation0 {
     font-size: 30px;
     width: 200px;
     flex: 1 1 auto;
@@ -73,10 +71,11 @@ body div div div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .sequence_section div {
-    margin: 10px;
+    margin: 20px;
     width: 80%;
 }
 

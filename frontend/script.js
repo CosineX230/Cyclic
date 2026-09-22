@@ -8,8 +8,11 @@ async function handleSubmit() {
     const c_length = document.getElementById("cycle_length")
 
     const relationEls = document.querySelectorAll('.relation');
-    const relationList = Array.from(relationEls, el => el.value.trim()).filter(Boolean);
+    const relationRawList = Array.from(relationEls, el => el.value.trim())//.filter(Boolean);
+    console.log(relationRawList);
+    const relationList = handleMissingRules(relationRawList);
     const seed = document.getElementById("input");
+    console.log(relationList);
 
     if (relationList.length === 0) {
         output.value = "Please enter rule values.";
@@ -64,4 +67,16 @@ async function handleSubmit() {
 function resizeOutput(output) {
     output.style.height = 'auto';
     output.style.height = `${output.scrollHeight}px`;
+}
+
+function handleMissingRules(relationList) {
+    if(relationList[0] == "") {
+        relationList[0] = "x / " + relationList.length;
+    }
+    for(let i = 1; i < relationList.length; i++) {
+        if(relationList[i] == '') {
+            relationList[i] = "x + 1";
+        }
+    }
+    return relationList;
 }

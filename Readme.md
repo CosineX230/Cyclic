@@ -13,6 +13,7 @@ For those unfamiliar with the math behind the program, I recommend using what I 
 
 ## Project Structure
 
+```
 Cyclic/
    ├─ backend/
    │  ├─ eval.py
@@ -22,6 +23,7 @@ Cyclic/
       ├─ ruleset.js
       ├─ script.js
       └─ style.css
+```
 
 ## Notes
 

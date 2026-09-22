@@ -8,8 +8,8 @@ function verifyInputValue(number){
     if(count < 2){
         return 2;
     }
-    if(count > 5){
-        return 5;
+    if(count > 6){
+        return 6;
     }
     return count;
 }
@@ -24,7 +24,7 @@ function generateBoxes(){
 
         const label = document.createElement("label");
         label.setAttribute("for", "relation" + i);
-        label.textContent = "Case x % " + count + " = " + i;
+        label.textContent = "If (x % " + count + " = " + i + ") Then x -> ";
         
         const field = document.createElement("input");
         field.type = "text";
