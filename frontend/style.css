@@ -1,5 +1,5 @@
 body {
-    background-color: #355C7D;
+    background-color: #4a759c;
 }
 
 body div {
@@ -7,17 +7,17 @@ body div {
     margin: 20px;
     justify-self: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #6C5B7B;
+    background-color: #8a7999;
     border: 4px solid Black;
     border-radius: 20px;
 }
 
 body div div {
-    background-color: #C06C84;
+    background-color: #d27c95;
 }
 
 body div div div {
-    background-color: #F67280;
+    background-color: #f8838f;
 }
 
 .title_section {
